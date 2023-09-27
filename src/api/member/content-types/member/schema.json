@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MemberName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "MemberDescriptionText": {
+      "type": "richtext",
+      "required": true
+    },
+    "ProfilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "MemberName",
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "AdditionalInformation": {
+      "type": "json"
+    },
+    "MemberPersonalEmail": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "MemberContactInformation": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
