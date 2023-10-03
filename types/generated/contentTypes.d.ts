@@ -390,6 +390,17 @@ export interface ApiMemberMember extends Schema.CollectionType {
     MemberContactInformation: Attribute.String &
       Attribute.Required &
       Attribute.Unique;
+    TabValue: Attribute.Enumeration<
+      [
+        'Admissions',
+        'Careers and Majors',
+        'Essay Specialists',
+        'Financial',
+        'Test Preparation'
+      ]
+    > &
+      Attribute.Required;
+    DesignationText: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

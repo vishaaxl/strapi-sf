@@ -26,10 +26,7 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "Slug": {
@@ -54,6 +51,20 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "TabValue": {
+      "type": "enumeration",
+      "enum": [
+        "Admissions",
+        "Careers and Majors",
+        "Essay Specialists",
+        "Financial",
+        "Test Preparation"
+      ],
+      "required": true
+    },
+    "DesignationText": {
+      "type": "string"
     }
   }
 }
